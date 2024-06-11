@@ -1,0 +1,61 @@
+.Strings {
+    width: 100%;
+    margin-top: 10px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.Selector {
+    margin-top: 30px;
+    width: 90%;
+    backdrop-filter: blur(80px);
+    border-radius: 25px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.6em;
+    box-shadow: 0 0 5px #000;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Letters {
+    background-color: transparent;
+}
+
+.Titulo {
+    margin-bottom: 20px;
+    /* Add margin below the title */
+}
+
+.Fields {
+    background-color: transparent;
+    margin-right: 30px;
+    display: flex;
+}
+
+.Tit {
+    background-color: transparent;
+    text-align: left;
+    margin-right: 100px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.Impresiones {
+    justify-content: start;
+    align-items: start;
+    display: grid;
+    background-color: transparent;
+}

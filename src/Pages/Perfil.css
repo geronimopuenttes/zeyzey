@@ -1,0 +1,36 @@
+.Perf {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    margin-top: 45px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.Perfil {
+    margin-top: 100px;
+    width: 90%;
+    height: 600px;
+    backdrop-filter: blur(80px);
+    border-radius: 25px;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    font-size: 1.6em;
+    box-shadow: 0 0 5px #000;
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
+    background-size: cover;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.Nombre {
+    background-color: transparent;
+}

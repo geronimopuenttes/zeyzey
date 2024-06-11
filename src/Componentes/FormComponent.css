@@ -1,0 +1,74 @@
+.Formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.DivForm {
+    margin-top: 20px;
+    display: block;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.Fields {
+    background-color: transparent;
+    margin-right: 30px;
+
+}
+
+.Seccion3,
+.Seccion4 {
+    flex: 1;
+    background-color: transparent;
+    box-sizing: border-box;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.Seccion1,
+.Seccion2 {
+    display: flexbox;
+    background-color: transparent;
+    box-sizing: border-box;
+    text-align: left;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.DivNotif {
+    display: flex;
+    /* Ensure items stack vertically */
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    text-align: left;
+    /* Ensure text aligns to the left */
+}
+
+.Tit {
+    background-color: transparent;
+    text-align: left;
+    margin-right: 100px;
+}
+
+.Titulo {
+    background-color: transparent;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
