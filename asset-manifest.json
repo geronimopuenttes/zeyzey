@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/zeyzey/static/css/main.768a53c2.css",
-    "main.js": "/zeyzey/static/js/main.b5d34b0c.js",
+    "main.js": "/zeyzey/static/js/main.f8bb6401.js",
     "static/js/453.7513dec6.chunk.js": "/zeyzey/static/js/453.7513dec6.chunk.js",
     "index.html": "/zeyzey/index.html",
     "main.768a53c2.css.map": "/zeyzey/static/css/main.768a53c2.css.map",
-    "main.b5d34b0c.js.map": "/zeyzey/static/js/main.b5d34b0c.js.map",
+    "main.f8bb6401.js.map": "/zeyzey/static/js/main.f8bb6401.js.map",
     "453.7513dec6.chunk.js.map": "/zeyzey/static/js/453.7513dec6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.768a53c2.css",
-    "static/js/main.b5d34b0c.js"
+    "static/js/main.f8bb6401.js"
   ]
 }
