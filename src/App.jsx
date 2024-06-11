@@ -122,7 +122,7 @@ function App() {
           <Navbar />
           <Routes>
             {/* Define routes for different pages */}
-            <Route path="/" element={<Home />} />
+            <Route path="/zeyzey" element={<Home />} />
             <Route path="/inicio" element={<IniciarSesion />} />
             <Route path="/registro" element={<Registrarme />} />
             <Route path="/terreno" element={<Terreno />} />
