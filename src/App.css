@@ -18,3 +18,11 @@
   justify-content: center;
   display: block;
 }
+
+/* Media query for phones */
+@media only screen and (max-width: 600px) {
+  .App {
+    padding: 20px;
+    /* Add padding for better spacing */
+  }
+}

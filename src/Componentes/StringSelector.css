@@ -12,12 +12,15 @@
 .Selector {
     margin-top: 30px;
     width: 90%;
+    max-width: 600px;
+    /* Added maximum width for better responsiveness */
     backdrop-filter: blur(80px);
     border-radius: 25px;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.2em;
+    /* Decreased font size for better readability on smaller screens */
     box-shadow: 0 0 5px #000;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
     background-size: cover;
@@ -39,18 +42,27 @@
 
 .Fields {
     background-color: transparent;
-    margin-right: 30px;
+    margin-right: 10px;
+    /* Decreased margin for better spacing on smaller screens */
+    margin-left: 10px;
+    /* Added margin to the left for better spacing on smaller screens */
     display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next row */
+    justify-content: center;
+    /* Center items horizontally */
 }
 
 .Tit {
     background-color: transparent;
     text-align: left;
-    margin-right: 100px;
+    margin-right: 20px;
+    /* Decreased margin for better spacing on smaller screens */
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px;
+    /* Decreased margin for better spacing on smaller screens */
 }
 
 .Impresiones {
@@ -58,4 +70,8 @@ input[type="checkbox"] {
     align-items: start;
     display: grid;
     background-color: transparent;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /* Adjusted grid to automatically adjust to screen size */
+    gap: 10px;
+    /* Added gap between grid items */
 }

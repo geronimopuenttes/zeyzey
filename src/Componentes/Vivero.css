@@ -6,7 +6,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    /* Changed to flex */
     flex-direction: column;
     /* Ensure children are stacked vertically */
 }
@@ -14,25 +13,28 @@
 .grid {
     margin-top: 30px;
     width: 90%;
-    height: 600px;
+    max-width: 600px;
+    /* Added maximum width for better responsiveness */
+    height: auto;
+    /* Allow height to adjust based on content */
     backdrop-filter: blur(80px);
     border-radius: 25px;
     align-items: center;
     justify-content: center;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.2em;
+    /* Decreased font size for better readability on smaller screens */
     box-shadow: 0 0 5px #000;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
     background-size: cover;
-    /* Changed to flex */
+    display: flex;
     flex-direction: column;
     /* Ensure children are stacked vertically */
     overflow: hidden;
     box-sizing: border-box;
     text-align: center;
-    display: flex;
     grid-gap: 10px;
-    /* Ensure text aligns to the center */
+    /* Added gap between grid items */
 }
 
 .Titulo {
@@ -45,7 +47,6 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    /* Changed to flex */
     flex-direction: column;
     /* Ensure rows are stacked vertically */
 }
@@ -53,10 +54,10 @@
 .row {
     background-color: transparent;
     display: flex;
-    /* Ensure cells are in a row */
     justify-content: center;
     /* Center the cells horizontally */
-    grid-template-columns: repeat(10, 1fr);
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next row */
 }
 
 .cell {
@@ -65,4 +66,8 @@
     border: 1px solid #ccc;
     padding: 10px;
     /* Add some space between cells */
+    flex: 1 0 calc(25% - 10px);
+    /* Each cell takes up 25% of the container width with some margin */
+    max-width: calc(25% - 10px);
+    /* Set maximum width for each cell */
 }

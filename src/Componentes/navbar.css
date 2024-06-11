@@ -1,69 +1,14 @@
 .navbar {
     background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
-    align-content: center;
+    align-items: center;
     display: flex;
     backdrop-filter: blur(20px);
     width: 100%;
     height: 80px;
     padding: 0;
     margin: 0;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 100px;
-}
-
-.userName {
-    background-color: transparent;
-    border: 0;
-    border-radius: 15px;
-    color: #FFF;
-    display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 20px;
-    backdrop-filter: blur(80px);
-    transition: box-shadow .1s ease-in-out;
-}
-
-.userName:hover {
-    box-shadow: 0 0 10px #000;
-    color: #FFF;
-}
-
-.titulo {
-    background-color: transparent;
-    color: #FFF;
-}
-
-.link {
-    background-color: transparent;
-    border: 0;
-    border-radius: 15px;
-    color: #FFF;
-    border-color: #41B06E;
-    display: inline-flex;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 20px;
-    backdrop-filter: blur(80px);
-    transition: box-shadow .1s ease-in-out;
-}
-
-.link:hover {
-    box-shadow: 0 0 10px #000;
-    color: #FFF;
 }
 
 .icon {
@@ -78,42 +23,24 @@
     margin: 15px 26px 15px;
 }
 
+/* Adjust margin and padding for smaller screens */
+.userName,
+.link,
 .cerrarSesion {
-    background-color: transparent;
-    border: 1px;
-    border-radius: 15px;
-    color: #FFF;
-    cursor: pointer;
-    display: inline-block;
-    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 2.5;
-    outline: transparent;
-    padding: 0 1rem;
-    text-align: center;
-    text-decoration: none;
-    user-select: none;
-    -webkit-user-select: none;
-    touch-action: manipulation;
-    white-space: nowrap;
-    margin: 5px 20px;
-    background-color: transparent;
-    backdrop-filter: blur(80px);
-    transition: box-shadow .1s ease-in-out;
+    margin: 5px 10px;
+    padding: 0 0.5rem;
+    font-size: 14px;
+    /* Decrease font size for smaller screens */
 }
 
-
-
-.cerrarSesion:hover {
-    box-shadow: 0 0 10px #000;
-    color: #FFF;
+/* Adjust margin for smaller screens */
+.titulo {
+    margin: 5px;
 }
 
-.Contenedor {
-    background-color: transparent;
-}
-
-.perfil {
-    background-color: transparent;
+/* Hide icon on smaller screens */
+@media (max-width: 768px) {
+    .icon {
+        display: none;
+    }
 }

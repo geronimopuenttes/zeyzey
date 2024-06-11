@@ -37,3 +37,17 @@
     align-items: center;
     justify-content: center;
 }
+
+/* Media query for phones */
+@media only screen and (max-width: 600px) {
+    .OpcionesViveros {
+        margin-top: 20px;
+        /* Reduce margin for smaller screens */
+        width: 90%;
+        /* Adjust width for better fit */
+        height: auto;
+        /* Allow height to adjust based on content */
+        font-size: 1.2em;
+        /* Decrease font size for better readability */
+    }
+}

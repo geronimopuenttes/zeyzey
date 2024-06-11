@@ -1,7 +1,9 @@
 .DivNotif {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    /* Change flex direction to column for better stacking on smaller screens */
+    align-items: center;
+    /* Center items horizontally */
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
@@ -9,11 +11,15 @@
 }
 
 .Notif {
-    margin-top: 100px;
+    margin-top: 20px;
+    /* Decreased margin for better spacing on smaller screens */
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    /* Change flex direction to column for better stacking on smaller screens */
+    justify-content: center;
+    /* Center items vertically */
+    align-items: center;
+    /* Center items horizontally */
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
@@ -26,14 +32,16 @@
     flex: 1;
     background-color: transparent;
     box-sizing: border-box;
-    text-align: left;
+    text-align: center;
+    /* Center text horizontally */
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
 
 .Tit {
     background-color: transparent;
-    text-align: left;
+    text-align: center;
+    /* Center text horizontally */
 }
 
 .Letters {
@@ -41,5 +49,6 @@
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px;
+    /* Decreased margin for better spacing on smaller screens */
 }

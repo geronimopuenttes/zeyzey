@@ -14,19 +14,25 @@
 }
 
 .cuadroUno {
-    margin-top: 100px;
+    margin-top: 50px;
+    /* Adjusted margin for smaller screens */
     width: 90%;
-    height: 450px;
+    max-width: 800px;
+    /* Added maximum width for better responsiveness */
+    height: auto;
+    /* Allow height to adjust based on content */
     backdrop-filter: blur(80px);
     border-radius: 25px;
-    margin: 20px;
+    margin: 20px auto;
+    /* Centered the element */
     align-items: center;
     display: flex;
     justify-content: center;
     padding: 30px;
     text-align: left;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.2em;
+    /* Decreased font size for better readability on smaller screens */
     box-shadow: 0 0 5px #000;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
     background-size: cover;
@@ -36,24 +42,16 @@
     background-color: transparent;
 }
 
-.Titulo {
-    width: 1000px;
-    background-color: transparent;
-    margin-right: 100px;
-}
-
-.Subtitulo {
-    width: 1000px;
-    margin-top: 20px;
-    background-color: transparent;
-    margin-right: 100px;
-}
-
+.Titulo,
+.Subtitulo,
 .Text {
-    margin-top: 20px;
+    width: 100%;
+    /* Adjusted width to be 100% for better responsiveness */
+    max-width: 90%;
+    /* Added maximum width for better responsiveness */
+    margin: 0 auto 20px;
+    /* Centered the elements and added bottom margin for spacing */
     background-color: transparent;
-    width: 1000px;
-    margin-right: 100px;
 }
 
 .Boton {
@@ -63,20 +61,20 @@
     color: #FFF;
     display: inline-block;
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 18px;
+    font-size: 16px;
+    /* Decreased font size for better readability on smaller screens */
     font-weight: 450;
     line-height: 2.5;
     outline: transparent;
     padding: 0 1rem;
     text-align: center;
     text-decoration: none;
-    margin: 5px 20px;
+    margin: 5px auto;
+    /* Centered the button */
     transition: box-shadow .1s ease-in-out;
     backdrop-filter: blur(80px);
-}
-
-.BotonDiv {
-    background-color: transparent;
+    max-width: 200px;
+    /* Added maximum width for better responsiveness */
 }
 
 .Boton:hover {

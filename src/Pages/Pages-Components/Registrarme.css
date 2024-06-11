@@ -1,15 +1,21 @@
 .paginaDeRegistro {
     margin-top: 100px;
-    width: 70%;
-    height: 400px;
+    width: 90%;
+    /* Adjusted width for better responsiveness */
+    max-width: 600px;
+    /* Added maximum width for better responsiveness */
+    height: auto;
+    /* Allow height to adjust based on content */
     backdrop-filter: blur(80px);
     border-radius: 25px;
-    margin: 20px;
+    margin: 20px auto;
+    /* Center the element horizontally */
     align-items: center;
     justify-content: center;
     padding: 30px;
     color: white;
-    font-size: 1.6em;
+    font-size: 1.2em;
+    /* Decreased font size for better readability on smaller screens */
     box-shadow: 0 0 5px #000;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
     background-size: cover;
@@ -20,7 +26,8 @@
 }
 
 .Registro {
-    height: 100%;
+    height: auto;
+    /* Allow height to adjust based on content */
     width: 100%;
     margin: 0;
     padding: 0;
@@ -39,17 +46,11 @@
     align-items: center;
 }
 
-.Fields {
-    background-color: transparent;
-    margin-top: 0%;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
+.Fields,
 .Fields2 {
     background-color: transparent;
-    margin-top: 0%;
+    margin-top: 20px;
+    /* Increased top margin for better spacing */
     text-align: center;
     justify-content: center;
     align-items: center;

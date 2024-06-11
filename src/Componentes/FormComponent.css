@@ -1,7 +1,9 @@
 .Formulario {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    /* Change to column for stacking items vertically */
     justify-content: center;
+    align-items: center;
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
@@ -11,45 +13,40 @@
 .DivForm {
     margin-top: 20px;
     display: block;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
-    padding: 40px;
+    padding: 20px;
+    /* Decrease padding for smaller screens */
     overflow: hidden;
 }
 
 .Fields {
     background-color: transparent;
-    margin-right: 30px;
-
+    margin-right: 0;
+    /* Remove right margin for smaller screens */
 }
 
 .Seccion3,
-.Seccion4 {
+.Seccion4,
+.Seccion1,
+.Seccion2 {
     flex: 1;
     background-color: transparent;
     box-sizing: border-box;
-    text-align: left;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-}
-
-.Seccion1,
-.Seccion2 {
-    display: flexbox;
-    background-color: transparent;
-    box-sizing: border-box;
-    text-align: left;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+    text-align: center;
+    /* Center text for smaller screens */
+    margin-bottom: 20px;
+    /* Add some space between sections for smaller screens */
 }
 
 .DivNotif {
     display: flex;
     /* Ensure items stack vertically */
+    flex-direction: column;
+    /* Change to column for stacking items vertically */
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;
@@ -60,15 +57,18 @@
 .Tit {
     background-color: transparent;
     text-align: left;
-    margin-right: 100px;
+    margin-right: 0;
+    /* Remove right margin for smaller screens */
 }
 
 .Titulo {
     background-color: transparent;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    /* Decrease margin bottom for smaller screens */
 }
 
 input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 5px;
+    /* Decrease right margin for checkboxes */
 }
