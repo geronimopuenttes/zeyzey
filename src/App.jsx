@@ -118,11 +118,11 @@ function App() {
     <div className="App">
       {/* Provide context to the application */}
       <AppContext.Provider value={{ setSelectedVivero, currentUser, selectedVivero, whichVivero, setWhichVivero, setCheckedItems, checkedItems, cantidadFilas, cantidadColumnas, setCantidadColumnas, setCantidadFilas, cuadricula, setCuadricula, actNotificaciones, setActNotificaciones, dataFetched, setDataFetched, viveroAgua, setViveroAgua, viveroMan, setViveroMan }}>
-        <Router>
+        <Router basename="/zeyzey">
           <Navbar />
           <Routes>
             {/* Define routes for different pages */}
-            <Route path="/zeyzey" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/inicio" element={<IniciarSesion />} />
             <Route path="/registro" element={<Registrarme />} />
             <Route path="/terreno" element={<Terreno />} />
