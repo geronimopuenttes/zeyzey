@@ -19,7 +19,7 @@ export const HandleLogout = () => {
     };
     const loggOff = () => {
         signOff();
-        navigate("/inicio");
+        navigate("/");
     };
 
     // Conditional rendering of the logout button
