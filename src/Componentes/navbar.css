@@ -15,32 +15,65 @@
     background-color: transparent;
     background-image: url('https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Icon.png?alt=media&token=b422e612-1fae-4de3-9ecc-39c65663d8e1');
     background-size: contain;
-    /* Adjust based on your image aspect ratio */
     background-repeat: no-repeat;
     width: 50px;
-    /* Adjust width and height as needed */
     height: 50px;
     margin: 15px 26px 15px;
 }
 
-/* Adjust margin and padding for smaller screens */
+.Contenedor,
+.perfil {
+    background-color: transparent;
+}
+
+.titulo {
+    background-color: transparent;
+    color: #FFF;
+}
+
 .userName,
 .link,
 .cerrarSesion {
-    margin: 5px 10px;
-    padding: 0 0.5rem;
-    font-size: 14px;
-    /* Decrease font size for smaller screens */
+    background-color: rgba(255, 255, 255, 0.1);
+    ;
+    /* Slightly transparent background */
+    border: 0;
+    border-radius: 15px;
+    color: #FFF;
+    display: inline-block;
+    font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 20px;
+    backdrop-filter: blur(10px);
+    /* Blur effect */
+    transition: box-shadow .1s ease-in-out;
 }
 
-/* Adjust margin for smaller screens */
-.titulo {
-    margin: 5px;
+.userName:hover,
+.link:hover,
+.cerrarSesion:hover {
+    box-shadow: 0 0 10px #000;
+    color: #FFF;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hide icon on smaller screens */
-@media (max-width: 768px) {
-    .icon {
+@media (max-width: 600px) {
+
+    .userName,
+    .link,
+    .cerrarSesion {
+        margin: 5px 10px;
+        padding: 0 0.5rem;
+        font-size: 14px;
+    }
+
+    .titulo {
         display: none;
     }
 }

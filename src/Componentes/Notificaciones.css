@@ -14,8 +14,6 @@
     margin-top: 20px;
     /* Decreased margin for better spacing on smaller screens */
     display: flex;
-    flex-direction: column;
-    /* Change flex direction to column for better stacking on smaller screens */
     justify-content: center;
     /* Center items vertically */
     align-items: center;
@@ -51,4 +49,10 @@
 input[type="checkbox"] {
     margin-right: 5px;
     /* Decreased margin for better spacing on smaller screens */
+}
+
+@media only screen and (max-width: 600px) {
+    .Notif {
+        flex-direction: column;
+    }
 }
