@@ -1,28 +1,25 @@
 .DivNotif {
     display: flex;
     flex-direction: column;
-    /* Change flex direction to column for better stacking on smaller screens */
     align-items: center;
-    /* Center items horizontally */
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
+    min-height: 120px;
 }
 
 .Notif {
     margin-top: 20px;
-    /* Decreased margin for better spacing on smaller screens */
     display: flex;
     justify-content: center;
-    /* Center items vertically */
     align-items: center;
-    /* Center items horizontally */
     background-color: transparent;
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
     overflow: hidden;
+    min-height: 100px;
 }
 
 .Agua,
@@ -31,7 +28,6 @@
     background-color: transparent;
     box-sizing: border-box;
     text-align: center;
-    /* Center text horizontally */
     overflow-wrap: break-word;
     word-wrap: break-word;
 }
@@ -39,7 +35,6 @@
 .Tit {
     background-color: transparent;
     text-align: center;
-    /* Center text horizontally */
 }
 
 .Letters {
@@ -48,7 +43,6 @@
 
 input[type="checkbox"] {
     margin-right: 5px;
-    /* Decreased margin for better spacing on smaller screens */
 }
 
 @media only screen and (max-width: 600px) {

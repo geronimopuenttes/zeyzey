@@ -1,6 +1,6 @@
 import './Vivero.css';
 import React, { useContext, useEffect, useState } from 'react';
-import { collection, setDoc, doc, getDoc } from 'firebase/firestore';
+import { collection, setDoc, doc } from 'firebase/firestore';
 import { db, auth } from '../firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { DefineOrder } from './DefineOrder';
@@ -10,7 +10,6 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
     const [user] = useAuthState(auth);
     const { cuadricula, setCuadricula } = useContext(AppContext);
     const today = new Date();
-
 
     useEffect(() => {
         const createCollection = async () => {
@@ -49,8 +48,21 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
 
     }, [cantidadColumnas, cantidadFilas, checkedItems, cuadricula, user, formSubmitted2]);
 
+    // Transpose the cuadricula array to switch columns and rows
+    const transposedCuadricula = () => {
+        if (cuadricula.length === 0) return [];
+        const transposed = [];
+        for (let i = 0; i < cuadricula[0].length; i++) {
+            transposed[i] = [];
+            for (let j = 0; j < cuadricula.length; j++) {
+                transposed[i][j] = cuadricula[j][i];
+            }
+        }
+        return transposed;
+    };
+
     return (
-        <div className="grid">
+        <div className="Vivero">
             <DefineOrder
                 cantidadColumnas={cantidadColumnas}
                 cantidadFilas={cantidadFilas}
@@ -58,15 +70,17 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
                 setCuadricula={setCuadricula}
             />
             <h1 className='Titulo'>{nombreVivero}</h1>
-            {cuadricula.map((row, rowIndex) => (
-                <div key={rowIndex} className="row">
-                    {row.map((cell, cellIndex) => (
-                        <div key={cellIndex} className="cell">
-                            {cell}
-                        </div>
-                    ))}
-                </div>
-            ))}
+            <div className='grid'>
+                {transposedCuadricula().map((row, rowIndex) => (
+                    <div key={rowIndex} className="row">
+                        {row.map((cell, cellIndex) => (
+                            <div key={cellIndex} className="cell">
+                                {cell}
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
