@@ -6,7 +6,6 @@
     align-items: center;
     background-color: transparent;
     width: 100%;
-    box-sizing: border-box;
     padding: 10px;
 }
 
@@ -16,7 +15,7 @@
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
     padding: 20px;
     /* Decrease padding for smaller screens */
@@ -26,14 +25,22 @@
 .Fields {
     background-color: transparent;
     margin-right: 0;
-    /* Remove right margin for smaller screens */
+    display: flex;
+    flex-direction: row;
+}
+
+.Boxes {
+    background-color: transparent;
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 .Seccion3,
 .Seccion4,
 .Seccion1,
 .Seccion2 {
-    flex: 1;
+    display: flex;
     background-color: transparent;
     box-sizing: border-box;
     text-align: center;
@@ -44,9 +51,7 @@
 
 .DivNotif {
     display: flex;
-    /* Ensure items stack vertically */
     flex-direction: column;
-    /* Change to column for stacking items vertically */
     justify-content: flex-start;
     align-items: flex-start;
     width: 100%;

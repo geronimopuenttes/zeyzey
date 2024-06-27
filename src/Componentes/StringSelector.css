@@ -12,7 +12,7 @@
 .Selector {
     margin-top: 30px;
     width: 90%;
-    max-width: 600px;
+    max-width: 1600px;
     /* Added maximum width for better responsiveness */
     backdrop-filter: blur(80px);
     border-radius: 25px;
@@ -43,14 +43,13 @@
 .Fields {
     background-color: transparent;
     margin-right: 10px;
-    /* Decreased margin for better spacing on smaller screens */
     margin-left: 10px;
     /* Added margin to the left for better spacing on smaller screens */
     display: flex;
-    flex-wrap: wrap;
-    /* Allow items to wrap to the next row */
-    justify-content: center;
-    /* Center items horizontally */
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .Tit {
@@ -66,12 +65,11 @@ input[type="checkbox"] {
 }
 
 .Impresiones {
-    justify-content: start;
-    align-items: start;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: transparent;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    /* Adjusted grid to automatically adjust to screen size */
-    gap: 10px;
-    /* Added gap between grid items */
+    width: 100%;
+    text-align: left;
 }

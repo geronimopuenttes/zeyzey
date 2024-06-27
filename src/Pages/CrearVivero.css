@@ -9,11 +9,18 @@
     display: flex;
 }
 
+.Impresiones {
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-bottom: 40px;
+}
+
 .form {
     margin-top: 30px;
-    width: 90%;
     /* Adjusted width for better responsiveness */
-    max-width: 600px;
+    width: 90%;
     /* Added maximum width for better responsiveness */
     height: auto;
     /* Allow height to adjust based on content */

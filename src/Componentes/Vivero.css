@@ -12,8 +12,7 @@
 
 .grid {
     margin-top: 30px;
-    width: 90%;
-    max-width: 600px;
+    width: auto;
     backdrop-filter: blur(80px);
     border-radius: 25px;
     align-items: center;
@@ -23,11 +22,12 @@
     box-shadow: 0 0 5px #000;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
     background-size: cover;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     overflow: hidden;
     box-sizing: border-box;
     text-align: center;
+    padding: 20px;
 }
 
 .Titulo {
@@ -42,6 +42,11 @@
     /* Add some space between cells */
     box-sizing: border-box;
     word-wrap: break-word;
+}
+
+.Cuadros {
+    background-color: transparent;
+    margin-bottom: 20px;
 }
 
 .row {

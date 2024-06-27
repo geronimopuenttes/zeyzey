@@ -48,38 +48,27 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
 
     }, [cantidadColumnas, cantidadFilas, checkedItems, cuadricula, user, formSubmitted2]);
 
-    // Transpose the cuadricula array to switch columns and rows
-    const transposedCuadricula = () => {
-        if (cuadricula.length === 0) return [];
-        const transposed = [];
-        for (let i = 0; i < cuadricula[0].length; i++) {
-            transposed[i] = [];
-            for (let j = 0; j < cuadricula.length; j++) {
-                transposed[i][j] = cuadricula[j][i];
-            }
-        }
-        return transposed;
-    };
-
     return (
         <div className="Vivero">
-            <DefineOrder
-                cantidadColumnas={cantidadColumnas}
-                cantidadFilas={cantidadFilas}
-                checkedItems={checkedItems}
-                setCuadricula={setCuadricula}
-            />
-            <h1 className='Titulo'>{nombreVivero}</h1>
-            <div className='grid'>
-                {transposedCuadricula().map((row, rowIndex) => (
-                    <div key={rowIndex} className="row">
-                        {row.map((cell, cellIndex) => (
-                            <div key={cellIndex} className="cell">
-                                {cell}
-                            </div>
-                        ))}
-                    </div>
-                ))}
+            <div className="grid">
+                <DefineOrder
+                    cantidadColumnas={cantidadColumnas}
+                    cantidadFilas={cantidadFilas}
+                    checkedItems={checkedItems}
+                    setCuadricula={setCuadricula}
+                />
+                <h1 className='Titulo'>{nombreVivero}</h1>
+                <div className='Cuadros'>
+                    {cuadricula.map((row, rowIndex) => (
+                        <div key={rowIndex} className="row">
+                            {row.map((cell, cellIndex) => (
+                                <div key={cellIndex} className="cell">
+                                    {cell}
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

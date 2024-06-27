@@ -87,43 +87,47 @@ export const FormComponent = ({ setComestibles, nombreVivero, setNoComestibles, 
                 <div className='Seccion3'>
                     <div className='DivNotif'>
                         <h3 className='Tit'>¿Diseñarás granja o vivero?</h3>
-                        <label className='Fields'>
-                            <input
-                                type="checkbox"
-                                checked={granja}
-                                onChange={() => handleTipoDeVivero(1)}
-                            />
-                            Granja
-                        </label>
-                        <label className='Fields'>
-                            <input
-                                type="checkbox"
-                                checked={vivero}
-                                onChange={() => handleTipoDeVivero(2)}
-                            />
-                            Vivero
-                        </label>
+                        <div className='Boxes'>
+                            <label className='Fields'>
+                                <input
+                                    type="checkbox"
+                                    checked={granja}
+                                    onChange={() => handleTipoDeVivero(1)}
+                                />
+                                Granja
+                            </label>
+                            <label className='Fields'>
+                                <input
+                                    type="checkbox"
+                                    checked={vivero}
+                                    onChange={() => handleTipoDeVivero(2)}
+                                />
+                                Vivero
+                            </label>
+                        </div>
                     </div>
                 </div>
                 <div className='Seccion4'>
                     <div className='DivNotif'>
                         <h3 className='Tit'>Escoge uno o mas tipos de plantas</h3>
-                        <label className='Fields'>
-                            <input
-                                type="checkbox"
-                                checked={comestibles}
-                                onChange={definirComestibles}
-                            />
-                            Comestibles
-                        </label>
-                        <label className='Fields'>
-                            <input
-                                type="checkbox"
-                                checked={noComestibles}
-                                onChange={definirNoComestibles}
-                            />
-                            No Comestibles
-                        </label>
+                        <div className='Boxes'>
+                            <label className='Fields'>
+                                <input
+                                    type="checkbox"
+                                    checked={comestibles}
+                                    onChange={definirComestibles}
+                                />
+                                Comestibles
+                            </label>
+                            <label className='Fields'>
+                                <input
+                                    type="checkbox"
+                                    checked={noComestibles}
+                                    onChange={definirNoComestibles}
+                                />
+                                No Comestibles
+                            </label>
+                        </div>
                     </div>
 
                 </div>
