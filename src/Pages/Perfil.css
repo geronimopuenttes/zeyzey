@@ -13,16 +13,14 @@
 
 .Perfil {
     margin-top: 50px;
-    /* Adjusted margin for smaller screens */
-    width: 90%;
+    width: auto;
     height: auto;
-    /* Allow height to adjust based on content */
     backdrop-filter: blur(80px);
     border-radius: 25px;
     margin: 20px;
     align-items: center;
     justify-content: center;
-    padding: 30px;
+    padding: 50px;
     color: white;
     font-size: 1.6em;
     box-shadow: 0 0 5px #000;

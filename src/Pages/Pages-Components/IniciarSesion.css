@@ -30,7 +30,7 @@
     /* Allow height to adjust based on content */
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     margin-top: 45px;
     font-family: "Poppins", sans-serif;
     color: white;
@@ -70,5 +70,6 @@
 .Fields {
     background-color: transparent;
     margin-top: 20px;
+    margin-bottom: 20px;
     /* Increased top margin for better spacing */
 }

@@ -29,6 +29,9 @@ export const IniciarSesion = () => {
             console.log(error.message);
         }
     };
+    const registrarme = () => {
+        navigate("/registro");
+    }
 
     return (
         <div className="Iniciar" >
@@ -49,6 +52,10 @@ export const IniciarSesion = () => {
                         onChange={(event) => setLoginPassword(event.target.value)}
                     />
                     <button onClick={handleLogin} className="Boton">Iniciar Sesión</button>
+                </div>
+                <div className="Fields">
+                    <h3 className="Titulo">No tengo cuenta</h3>
+                    <button onClick={registrarme} className="Boton">Registrarme</button>
                 </div>
             </div >
         </div >

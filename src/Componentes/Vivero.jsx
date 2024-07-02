@@ -6,10 +6,11 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { collection, doc, getDoc } from 'firebase/firestore';
 import { DefineOrder } from './DefineOrder';
 import "./Vivero.css";
+import { Delete } from './Delete';
 
 export const Vivero = () => {
+    const [eliminar, setEliminar] = useState(false);
     const navigate = useNavigate();
-    const [viveroMostrar, setViveroMostrar] = useState([]); // State variable to store viveroMostrar
     const [user] = useAuthState(auth);
     const { whichVivero, setCheckedItems, checkedItems, cantidadFilas, setCantidadFilas, cantidadColumnas, setCantidadColumnas, cuadricula, setCuadricula } = useContext(AppContext);
 
@@ -27,11 +28,9 @@ export const Vivero = () => {
                 if (docSnapshot.exists()) {
                     const data = docSnapshot.data();
 
-                    // Update state with the retrieved values
                     setCantidadColumnas(data.cantidadColumnas);
                     setCantidadFilas(data.cantidadFilas);
 
-                    // Check if checkedItems exists and is an array, then save its values to stringsToPrint
                     if (Array.isArray(data.checkedItems)) {
                         setCheckedItems(data.checkedItems);
                     } else {
@@ -49,6 +48,14 @@ export const Vivero = () => {
             fetchData();
         }
     }, [user, whichVivero, setCantidadColumnas, setCantidadFilas, setCheckedItems]);
+
+    const eliminando = () => {
+        if (!user || !user.email || !whichVivero) {
+            console.log('User or Vivero ID is not available.');
+            return;
+        }
+        setEliminar(true);
+    };
 
     return (
         <div className='Vivero'>
@@ -70,9 +77,11 @@ export const Vivero = () => {
                             ))}
                         </div>
                     ))}
+                    <button onClick={eliminando} className='Boton'>Eliminar Vivero</button>
                 </div>
-
+                {eliminar && <Delete whichVivero={whichVivero} setEliminar={setEliminar} />}
             </div>
+
         </div>
     );
 };

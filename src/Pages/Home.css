@@ -15,14 +15,15 @@
 
 .cuadroUno {
     margin-top: 50px;
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1100px;
     height: auto;
     backdrop-filter: blur(80px);
     border-radius: 25px;
     margin: 20px auto;
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 30px;
     text-align: left;
@@ -34,42 +35,60 @@
 }
 
 .Contenido {
+    padding: 20px;
+    align-items: flex-start;
+    justify-content: baseline;
+    width: 90%;
     background-color: transparent;
+    text-align: left;
+    font-size: 1.6em;
 }
 
 .Titulo,
 .Subtitulo,
 .Text {
+    align-items: baseline;
+    justify-content: baseline;
+    text-align: left;
     width: 100%;
-    max-width: 90%;
     margin: 0 auto 20px;
     background-color: transparent;
 }
 
 .BotonDiv {
+    padding: 20px;
+    width: 100%;
+    display: flex;
     background-color: transparent;
+    justify-content: center;
+    align-items: center;
 }
 
 .Boton {
+    justify-content: center;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.1);
     border: 0;
     border-radius: 15px;
     color: #FFF;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
     font-weight: 450;
     line-height: 2.5;
     outline: transparent;
-    padding: 0 1rem;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
     margin: 5px auto;
-    /* Centered the button */
     transition: box-shadow .1s ease-in-out;
     backdrop-filter: blur(80px);
-    max-width: 200px;
-    /* Added maximum width for better responsiveness */
+    height: 50px;
+    width: auto;
+    /* Set width to auto to adjust based on content */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
 }
 
 .Boton:hover {
@@ -80,5 +99,9 @@
 @media only screen and (max-width: 600px) {
     .cuadroUno {
         display: inline;
+    }
+
+    .Boton {
+        white-space: wrap;
     }
 }

@@ -14,11 +14,15 @@ export function Home() {
         <div className='paginaHome'>
             <div className='cuadroUno'>
                 <div className='Contenido'>
-                    <h1 className='Titulo'>¡Diseña tu propio vivero en casa!</h1>
-                    <h2 className='Subtitulo'>¿Qué es la permacultura?</h2>
-                    <p className='Text'>La permacultura es un enfoque sostenible en el diseño de sistemas agrícolas y comunidades humanas integradas con el entorno. Su enfoque se centra en la eficiencia de recursos y regeneración del suelo para lograr sistemas más equitativos y sostenibles.</p>
+                    <h1 className='Titulo'>¡Zey Zey significa ser feliz!</h1>
                 </div>
-                <div className='BotonDiv'><button className='Boton' onClick={handleClick}>Crear Vivero</button></div>
+                <div className='BotonDiv'>
+                    <div className='Contenido'>
+                        <h3 className='Subtitulo'>Ser independiente y ser saludable te hara feliz</h3>
+                        <h3 className='Subtitulo'>Construyamos tu vivero</h3>
+                    </div>
+                    <button className='Boton' onClick={handleClick}>Crear Vivero</button>
+                </div>
             </div>
         </div>
     );

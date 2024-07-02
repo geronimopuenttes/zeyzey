@@ -28,7 +28,7 @@ export const Perfil = () => {
     return (
         <div className="Perf">
             <div className="Perfil">
-                <h4 className="Nombre">Hola @{currentUser}</h4>
+                <h1 className="Titulo">Hola @{currentUser}</h1>
                 <button onClick={handlePasswordReset} className="Boton">Cambiar contraseña</button>
                 <div className="Not">
                     {viveroAgua.length > 0 || viveroMan.length > 0 ? <Notificaciones /> : null}

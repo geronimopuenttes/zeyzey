@@ -1,51 +1,15 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { collection, getDocs, doc, updateDoc } from 'firebase/firestore';
+import React, { useState, useContext } from 'react';
+import { doc, updateDoc } from 'firebase/firestore';
 import { db, auth } from '../firebase-config';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { AppContext } from '../App';
-import "./Notificaciones.css"
+import "./Notificaciones.css";
 
 export const Notificaciones = () => {
     const [user] = useAuthState(auth);
-    const { dataFetched, setDataFetched, viveroAgua, setViveroAgua, viveroMan, setViveroMan } = useContext(AppContext);
+    const { viveroAgua, setViveroAgua, viveroMan, setViveroMan } = useContext(AppContext);
     const [checkedAgua, setCheckedAgua] = useState({});
     const [checkedMan, setCheckedMan] = useState({});
-
-    // Function to render checkboxes for viveroAgua
-    const renderAguaCheckboxes = () => {
-        return viveroAgua.map((vivero) => (
-            <div className='DivNotif'>
-                <div key={vivero} className='Agua'>
-                    <input
-                        type="checkbox"
-                        id={`agua-${vivero}`}
-                        name={vivero}
-                        checked={checkedAgua[vivero] || false}
-                        onChange={(e) => handleCheckboxChange(e, 'agua')}
-                    />
-                    <label htmlFor={`agua-${vivero}`} className='Letters'>{vivero}</label>
-                </div>
-            </div>
-        ));
-    };
-
-    // Function to render checkboxes for viveroMan
-    const renderManCheckboxes = () => {
-        return viveroMan.map((vivero) => (
-            <div className='DivNotif'>
-                <div key={vivero} className='Mantenimiento'>
-                    <input
-                        type="checkbox"
-                        id={`man-${vivero}`}
-                        name={vivero}
-                        checked={checkedMan[vivero] || false}
-                        onChange={(e) => handleCheckboxChange(e, 'man')}
-                    />
-                    <label htmlFor={`man-${vivero}`} className='Letters'>{vivero}</label>
-                </div>
-            </div>
-        ));
-    };
 
     const handleCheckboxChange = (e, type) => {
         const { name, checked } = e.target;
@@ -98,6 +62,50 @@ export const Notificaciones = () => {
         }
         setViveroMan(updatedViveroMan);
         setCheckedMan({});
+    };
+
+    const renderAguaCheckboxes = () => {
+        return viveroAgua.map((vivero) => (
+            <div className='DivNotif' key={vivero}>
+                <div className='Agua'>
+                    <input
+                        type="checkbox"
+                        id={`agua-${vivero}`}
+                        name={vivero}
+                        checked={checkedAgua[vivero] || false}
+                        onChange={(e) => handleCheckboxChange(e, 'agua')}
+                    />
+                    <label
+                        htmlFor={`agua-${vivero}`}
+                        className={`Boton1 ${checkedAgua[vivero] ? 'selected' : ''}`}
+                    >
+                        {vivero}
+                    </label>
+                </div>
+            </div>
+        ));
+    };
+
+    const renderManCheckboxes = () => {
+        return viveroMan.map((vivero) => (
+            <div className='DivNotif' key={vivero}>
+                <div className='Mantenimiento'>
+                    <input
+                        type="checkbox"
+                        id={`man-${vivero}`}
+                        name={vivero}
+                        checked={checkedMan[vivero] || false}
+                        onChange={(e) => handleCheckboxChange(e, 'man')}
+                    />
+                    <label
+                        htmlFor={`man-${vivero}`}
+                        className={`Boton1 ${checkedMan[vivero] ? 'selected' : ''}`}
+                    >
+                        {vivero}
+                    </label>
+                </div>
+            </div>
+        ));
     };
 
     return (

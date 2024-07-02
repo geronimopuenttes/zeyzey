@@ -61,20 +61,29 @@ export const Registrarme = () => {
             console.log(error.message);
         }
     };
-
+    const iniciarSesion = () => {
+        navigate("/inicio");
+    }
     return (
         <div className="Registro">
-            <div className="paginaDeRegistro">
+            <div className="Registrarme">
+                <h1 className="Titulo">Registrarme</h1>
                 <form onSubmit={handleSubmit(createUserName)} className="Fields">
-                    <h1 className="Titulo">Registrarme</h1>
-                    <div className="Fields2">
-                        <input placeholder="Nombre De Usuario" {...register("NombreUsuario")} className="Field" />
-                        <input placeholder="Email" {...register("Email")} className="Field" />
-                        <input placeholder="Contraseña" type="password" {...register("Password")} className="Field" />
-                        <input type='submit' className="Boton" />
+                    <div className="Forma">
+                        <div className="Fields">
+                            <input placeholder="Nombre De Usuario" {...register("NombreUsuario")} className="Field" />
+                            <input placeholder="Email" {...register("Email")} className="Field" />
+                            <input placeholder="Contraseña" type="password" {...register("Password")} className="Field" />
+                        </div>
+                        <div className="Fields">
+                            <input type='submit' className="Boton" />
+                        </div>
                     </div>
-
                 </form>
+                <div className="Fields">
+                    <h3 className="Titulo">Ya tengo cuenta</h3>
+                    <button onClick={iniciarSesion} className="Boton">Iniciar Sesion</button>
+                </div>
             </div>
         </div>
     );
