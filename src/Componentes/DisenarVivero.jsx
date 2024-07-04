@@ -10,6 +10,8 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
     const [user] = useAuthState(auth);
     const { cuadricula, setCuadricula } = useContext(AppContext);
     const today = new Date();
+    const [cantidadPlantas, setCantidadPlantas] = useState();
+    let semillas = 0;
 
     useEffect(() => {
         const createCollection = async () => {
@@ -48,6 +50,12 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
 
     }, [cantidadColumnas, cantidadFilas, checkedItems, cuadricula, user, formSubmitted2]);
 
+    // Calculate the number of plants required
+    const plantasRequeridas = checkedItems.length === cantidadPlantas
+        ? 4
+        : Math.ceil((cantidadPlantas / checkedItems.length) * 4);
+
+    const tierraNecesaria = Math.ceil(cantidadPlantas * 2.7);
     return (
         <div className="Vivero">
             <div className="grid">
@@ -56,8 +64,9 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
                     cantidadFilas={cantidadFilas}
                     checkedItems={checkedItems}
                     setCuadricula={setCuadricula}
+                    setCantidadPlantas={setCantidadPlantas}
                 />
-                <h1 className='Titulo'>{nombreVivero}</h1>
+                <h1 className='Titulo'>TU VIVERO: {nombreVivero}</h1>
                 <div className='Cuadros'>
                     {cuadricula.map((row, rowIndex) => (
                         <div key={rowIndex} className="row">
@@ -68,6 +77,14 @@ export const DisenarVivero = ({ cantidadColumnas, cantidadFilas, checkedItems, f
                             ))}
                         </div>
                     ))}
+                </div>
+                <div className='Pasos'>
+                    <h1 className='Titulo'>SIGUIENTES PASOS CON TU VIVERO</h1>
+                    <h3 className='Subtitulo'>- Necesitas {cantidadPlantas} materas</h3>
+                    <h3 className='Subtitulo'>- Necesitas {plantasRequeridas} semillas de cada planta</h3>
+                    <h3 className='Subtitulo'>- Necesitas {tierraNecesaria} kg de tierra</h3>
+                    <h3 className='Subtitulo'>- Organiza las materas en el orden que ves en la cuadricula,</h3>
+                    <h3 className='Subtitulo'>en los espacios que dice pasillo, deja libre para poder acceder.</h3>
                 </div>
             </div>
         </div>

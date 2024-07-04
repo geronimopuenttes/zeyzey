@@ -101,6 +101,10 @@
         display: inline;
     }
 
+    .BotonDiv {
+        display: inline;
+    }
+
     .Boton {
         white-space: wrap;
     }

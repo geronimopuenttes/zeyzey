@@ -1,9 +1,11 @@
+import { set } from 'firebase/database';
 import React, { useEffect } from 'react';
 
-export const DefineOrder = ({ cantidadColumnas, cantidadFilas, checkedItems, setCuadricula }) => {
+export const DefineOrder = ({ cantidadColumnas, cantidadFilas, checkedItems, setCuadricula, setCantidadPlantas }) => {
     useEffect(() => {
         const createGrid = () => {
             let counter = 0;
+            let counter2 = 0;
             let cot = 0;
             const newCuadricula = [];
             for (let i = 0; i < cantidadFilas; i++) {
@@ -11,6 +13,8 @@ export const DefineOrder = ({ cantidadColumnas, cantidadFilas, checkedItems, set
                 if (cot === 0) {
                     for (let j = 0; j < cantidadColumnas; j++) {
                         innerArray.push(checkedItems[counter]);
+                        counter2++;
+                        setCantidadPlantas(counter2);
                         if (counter === checkedItems.length - 1) {
                             counter = 0;
                         } else {
@@ -26,6 +30,8 @@ export const DefineOrder = ({ cantidadColumnas, cantidadFilas, checkedItems, set
                 } else {
                     for (let j = 0; j < cantidadColumnas; j++) {
                         innerArray.push(checkedItems[counter]);
+                        counter2++;
+                        setCantidadPlantas(counter2);
                         if (counter === checkedItems.length - 1) {
                             counter = 0;
                         } else {
@@ -36,6 +42,7 @@ export const DefineOrder = ({ cantidadColumnas, cantidadFilas, checkedItems, set
                 }
                 newCuadricula.push(innerArray);
             }
+            console.log(counter2);
             return newCuadricula;
         };
 

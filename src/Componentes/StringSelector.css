@@ -31,26 +31,30 @@
     text-align: center;
 }
 
-.Letters {
-    background-color: transparent;
-}
+
 
 .Titulo {
     margin-bottom: 20px;
     /* Add margin below the title */
 }
 
-.Fields {
-    background-color: transparent;
-    margin-right: 10px;
-    margin-left: 10px;
-    /* Added margin to the left for better spacing on smaller screens */
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: flex-start;
-    text-align: left;
+.Fields input[type="checkbox"]:checked+.Letters {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Highlighted background color */
+    border-radius: 5px;
+    color: #FFF;
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+.Letters {
+    background-color: transparent;
+    cursor: pointer;
+    /* Change cursor to pointer for labels */
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
 
 .Tit {
     background-color: transparent;

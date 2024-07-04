@@ -4,7 +4,6 @@ import "./StringSelector.css";
 export const StringSelector = ({ strings, maxPlantas, setFormSubmitted2, setCheckedStringsCount, checkedStringsCount, setCheckedItems, checkedItems, nombreVivero }) => {
     const [errorMessage, setErrorMessage] = useState("");
 
-
     // Function to handle checkbox change
     const handleCheckboxChange = (string) => {
         // Check if the string is already in the array

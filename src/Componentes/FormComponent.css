@@ -9,6 +9,37 @@
     padding: 10px;
 }
 
+.Field {
+    background-color: transparent;
+}
+
+.Caja {
+    background-color: transparent;
+    margin-right: 10px;
+}
+
+.BotonF {
+    background-color: transparent;
+}
+
+.BotonF input[type="checkbox"]:checked+label {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Highlighted background color */
+    border-radius: 15px;
+    color: #FFF;
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.BotonF label {
+    background-color: transparent;
+    cursor: pointer;
+    /* Change cursor to pointer for labels */
+    padding: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
 .DivForm {
     margin-top: 20px;
     display: block;
@@ -24,7 +55,7 @@
 
 .Fields {
     background-color: transparent;
-    margin-right: 0;
+    margin-right: 10px;
     display: flex;
     flex-direction: row;
 }
@@ -71,9 +102,4 @@
     text-align: center;
     margin-bottom: 20px;
     /* Decrease margin bottom for smaller screens */
-}
-
-input[type="checkbox"] {
-    margin-right: 5px;
-    /* Decrease right margin for checkboxes */
 }

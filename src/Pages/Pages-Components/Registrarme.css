@@ -2,21 +2,21 @@
     margin-top: 100px;
     width: 90%;
     height: auto;
-    /* Allow height to adjust based on content */
     backdrop-filter: blur(80px);
     border-radius: 25px;
     margin: 20px auto;
-    /* Center the element horizontally */
     align-items: center;
     justify-content: center;
     padding: 30px;
     color: white;
     font-size: 1.2em;
-    /* Decreased font size for better readability on smaller screens */
     box-shadow: 0 0 5px #000;
     background-image: url("https://firebasestorage.googleapis.com/v0/b/zeyzey-3f3ad.appspot.com/o/Tomatoes.jpg?alt=media&token=ae8a465c-f2e0-47b3-aeb6-dfe34d5ab837");
     background-size: cover;
-    display: grid;
+    display: flex;
+    /* Changed from grid to flex */
+    flex-direction: column;
+    /* Ensure it is a column layout */
     overflow: hidden;
     box-sizing: border-box;
     text-align: center;
@@ -24,7 +24,6 @@
 
 .Registro {
     height: auto;
-    /* Allow height to adjust based on content */
     width: 100%;
     margin: 0;
     padding: 20px;
@@ -34,12 +33,18 @@
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-direction: column;
+    /* Ensure this container is in column layout */
 }
 
 .Forma {
     background-color: transparent;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+    justify-content: center;
+    align-items: center;
 }
 
 .Titulo {
@@ -57,7 +62,6 @@
     display: inline-block;
     font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     font-size: 16px;
-    /* Decreased font size for better readability on smaller screens */
     font-weight: 450;
     line-height: 2.5;
     outline: transparent;
@@ -65,15 +69,37 @@
     text-align: center;
     text-decoration: none;
     margin: 10px;
-    /* Adjusted margin for better spacing on smaller screens */
     transition: box-shadow .1s ease-in-out;
     backdrop-filter: blur(80px);
 }
 
 .Fields {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    /* Default to column layout */
     background-color: transparent;
     margin-top: 20px;
     margin-bottom: 20px;
-    /* Increased top margin for better spacing */
+}
+
+@media only screen and (max-width: 600px) {
+    .Registro {
+        flex-direction: column;
+        /* Ensure that the parent container is in column layout */
+    }
+
+    .Fields {
+        flex-direction: column;
+        /* Change direction to column for smaller screens */
+    }
+
+    .Forma {
+        flex-direction: column;
+        /* Change direction to column for smaller screens */
+    }
+
+    .Boton {
+        white-space: normal;
+        /* Change white-space to normal */
+    }
 }
